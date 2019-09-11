@@ -4,7 +4,7 @@
     name: ceph-master
     scm:
       - git:
-          url: https://github.com/ceph/ceph.git
+          url: https://github.com/tchaikov/ceph.git
           branches:
             - origin/master
           skip-tag: true
@@ -17,10 +17,9 @@
     name: ceph-pr
     scm:
       - git:
-          url: https://github.com/ceph/ceph.git
+          url: https://github.com/tchaikov/ceph.git
           branches:
-            - ${sha1}
-          refspec: +refs/pull/${ghprbPullId}/*:refs/remotes/origin/pr/${ghprbPullId}/*
+            - origin/pr
           timeout: 20
           basedir: "ceph-pr"
           shallow-clone: true
