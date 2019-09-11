@@ -64,7 +64,8 @@
     project-type: freestyle
     defaults: global
     concurrent: true
-    node: huge && (centos7 || trusty) && rebootable
+    # node: huge && (centos7 || trusty) && rebootable
+    node: arm64
     display-name: 'ceph: crimson perf test'
     quiet-period: 5
     block-downstream: false
